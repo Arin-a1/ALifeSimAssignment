@@ -17,3 +17,5 @@ This repository provides a physical simulation platform for studying automatic d
 2. Next review `config.yaml`. This includes a number of parameters, only a small number of which you should consider modifying. 
 3. Review `robot.py`. This code illustrates how random robot designs can be sampled and explains the key constraints to keep in mind when representing robots for the simulator. You can also visualize designs in `visualize_robots.ipynb`. 
 4. Finally, try to run the code: `python run.py`. This will generate some results files that you can visualize with `plot_fitness.ipynb` and `visualizer.py`. 
+
+## Edits I made

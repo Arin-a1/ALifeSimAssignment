@@ -2,7 +2,7 @@ import numpy as np
 from scipy import ndimage
 
 # Size of the binary mask (8x8 grid of voxels)
-MASK_DIM = 8 
+MASK_DIM = 5 
 
 # Scale of the robot (edge length of a voxel)
 # NOTE: this is very important as the simulator physics are configured to use this scale, more or less.
@@ -15,8 +15,9 @@ def load_robots(num_robots):
 # Convert the binary mask to a mass-spring robot geometry
 # The parameter p is by default set to 0.55, which is the probability of a voxel being filled.
 # This is a manually tuned value that seems to produce a variety of different robot geometries.
-def sample_robot(p=0.55):
+def sample_robot(p=0.3):
     mask = sample_mask(p)
+
     masses, springs = mask_to_robot(mask)
     masses = masses * SCALE # NOTE: scale of the robot geometry is KEY to stable simulation!
     return {
@@ -46,8 +47,8 @@ def mask_to_robot(mask):
         [0, 2], # bl to top left (tl)
         [1, 3], # br to top right (tr)
         [2, 3], # tl to tr
-        [0, 3], # bl to tr
-        [1, 2], # br to tl
+        [0, 3] # bl to tr
+        #[1, 2], # br to tl
     ]
     masses = []
     springs = []
@@ -93,3 +94,5 @@ def sample_mask(p):
     component_height, component_width = component.shape
     new_mask[MASK_DIM - component_height:MASK_DIM, 0:component_width] = component.astype(int)
     return new_mask
+
+

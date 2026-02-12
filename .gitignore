@@ -2,3 +2,5 @@
 *.cpython*
 *.pyc
 /pycache/
+.env
+.DS_Store
