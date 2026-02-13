@@ -19,3 +19,8 @@ This repository provides a physical simulation platform for studying automatic d
 4. Finally, try to run the code: `python run.py`. This will generate some results files that you can visualize with `plot_fitness.ipynb` and `visualizer.py`. 
 
 ## Edits I made
+
+1. Reduced Voxel Grid Size 
+2. Lowered Voxel Fill Probability 
+3. Adjusted Spring Connectivity 
+4. Increased Robot Scale - Reduced this back because I didn't like the look of it.
