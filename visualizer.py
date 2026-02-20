@@ -120,7 +120,7 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--input", type=str, default="robot_0.npy", help="Path to saved robot .npy file")
     parser.add_argument("--config", type=str, default="config.yaml", help="Path to config file")
-    parser.add_argument("--port", type=int, default=5002)
+    parser.add_argument("--port", type=int, default=5005)
     parser.add_argument("--debug", action="store_true")
     args = parser.parse_args()
     

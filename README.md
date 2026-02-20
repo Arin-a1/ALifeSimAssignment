@@ -23,4 +23,14 @@ This repository provides a physical simulation platform for studying automatic d
 1. Reduced Voxel Grid Size 
 2. Lowered Voxel Fill Probability 
 3. Adjusted Spring Connectivity 
-4. Increased Robot Scale - Reduced this back because I didn't like the look of it.
+4. Increased Robot Scale - Reduced this back because I didn't like the look of it
+
+## Parallel Tree Climber algorithm implementation
+- See Evolution of PTC pdf for visual display of evolution
+## What it does:
+This algorithm evolves robot bodies AND brains simultaneously to maximize movement speed, using parallel simulation to test all robots at once.
+## Parallel Hill Climber algorithm 
+- Each robot tries to climb to higher fitness by:
+- Creating mutated children
+- Keeping the better performer (parent or child)
+- Gradually improving like climbing a hill
